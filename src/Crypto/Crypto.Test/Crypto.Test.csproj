@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0-preview-20170628-02" />
+    <PackageReference Include="xunit" Version="2.2.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0" />
+    <PackageReference Include="Moq" Version="4.10.1" />
+    <PackageReference Include="FluentAssertions" Version="5.6.0" />
+    <PackageReference Include="AutoFixture" Version="4.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="sampleSet.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="sampleSetLarge.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Crypto.Core\Crypto.Core.csproj" />
+    <ProjectReference Include="..\Crypto.Math\Crypto.Math.csproj" />
+    <ProjectReference Include="..\Crypto.Secure\Crypto.Secure.csproj" />
+    <ProjectReference Include="..\CryptoService\CryptoService.csproj" />
+  </ItemGroup>
+</Project>
